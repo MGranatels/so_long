@@ -39,7 +39,7 @@
 # define W 119
 # define FOE "assets/foe.xpm"
 # define PLAYER "assets/player.xpm"
-# define EXIT 27
+# define EXIT 53
 
 
 typedef struct s_map

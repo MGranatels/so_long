@@ -6,7 +6,7 @@
 #    By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/05/26 20:06:53 by mgranate         ###   ########.fr        #
+#    Updated: 2022/05/26 21:15:50 by mgranate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,8 @@ CFLAGS		=	-Wall -Wextra -Werror
 MLXFLAGS	=	-L ./mlx/ -lmlx -framework OpenGL -framework AppKit -lz
 RM			=	rm -f
 OBJS		=	$(SRCS:%.c=%.o)
+
+#INCLUDES = -Ilibft/ -I../so_long/includes
 
 ifeq ($(shell uname), Linux)
 MLXFLAGS	=	-L ./mlx_linux/ -lmlx -Ilmlx -lXext -lX11
