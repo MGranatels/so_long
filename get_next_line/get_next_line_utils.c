@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 14:10:23 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/26 19:12:13 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/28 18:56:12 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/get_next_line.h"
+#include "get_next_line.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen_get(const char *str)
 {
 	size_t	i;
 
@@ -63,7 +63,9 @@ char	*ft_get_line(char *line, char *buff)
 
 	temp = line;
 	i = 0;
-	line = malloc(sizeof(char) * ft_strlen(buff) + ft_strlen(line) + 1);
+	line = malloc(sizeof(char) * ft_strlen_get(buff) + ft_strlen_get(line) + 1);
+	if(!line)
+		return(0);
 	while (temp && temp[i])
 	{
 		line[i] = temp[i];

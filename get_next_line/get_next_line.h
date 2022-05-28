@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 20:01:59 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/26 19:12:53 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/28 18:20:32 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ char	*ft_get_line(char *line, char *buff);
 void	ft_clean_buff(char *buff);
 
 int		check_line_end(char *buffer);
-size_t	ft_strlen(const char *s);
+size_t	ft_strlen_get(const char *s);
 
 #endif

@@ -7,14 +7,10 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
-# include "get_next_line.h"
 # include "../libft/libft.h"
 # include "../mlx/mlx.h"
 # include "../printf/ft_printf.h"
-
-# ifndef O_DIRECTORY
-#  define O_DIRECTORY 00200000
-# endif
+# include "../get_next_line/get_next_line.h"
 
 # define ERROR -1
 # define FAILURE 1
@@ -40,7 +36,6 @@
 # define FOE "assets/foe.xpm"
 # define PLAYER "assets/player.xpm"
 # define EXIT 53
-
 
 typedef struct s_map
 {
@@ -81,4 +76,15 @@ typedef struct s_data
 
 }				t_data;
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+char	*get_next_line(int fd);
+char	*ft_get_line(char *line, char *buff);
+
+void	ft_clean_buff(char *buff);
+
+int		map_width(char *map, t_data	vars);
+int		check_line_end(char *buffer);
 #endif

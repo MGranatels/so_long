@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/05/26 21:15:50 by mgranate         ###   ########.fr        #
+#    Updated: 2022/05/28 18:19:25 by anne-sophie      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,14 @@ SRCS		=	srcs/main.c \
 
 LIBFT		=	libft/libft.a
 PRINTF		=	printf/libftprintf.a
+GNL			=	get_next_line/get_next_line.a
+
 CFLAGS		=	-Wall -Wextra -Werror
 MLXFLAGS	=	-L ./mlx/ -lmlx -framework OpenGL -framework AppKit -lz
-RM			=	rm -f
-OBJS		=	$(SRCS:%.c=%.o)
 
-#INCLUDES = -Ilibft/ -I../so_long/includes
+RM			=	rm -f
+
+OBJS		=	$(SRCS:%.c=%.o)
 
 ifeq ($(shell uname), Linux)
 MLXFLAGS	=	-L ./mlx_linux/ -lmlx -Ilmlx -lXext -lX11
@@ -46,9 +48,11 @@ $(NAME):	$(OBJS)
 			@echo $(CYAN) " - Compiling $@" $(RED)
 			@make -C libft
 			@make -C printf
+			@make -C get_next_line
 			@make clean -C libft
 			@make clean -C printf
-			$(CC) $(SRCS) $(LIBFT) $(PRINTF) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
+			@make clean -C get_next_line
+			$(CC) $(SRCS) $(LIBFT) $(PRINTF) $(GNL) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
 
 clean:
 			@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC)
