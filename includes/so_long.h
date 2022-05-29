@@ -57,6 +57,7 @@ typedef struct s_img
 	void	*wall;
 	void	*exit_l;
 	void	*player;
+	void	*path;
 
 }	t_img;
 
@@ -80,11 +81,10 @@ typedef struct s_data
 #  define BUFFER_SIZE 1024
 # endif
 
-char	*get_next_line(int fd);
-char	*ft_get_line(char *line, char *buff);
+void	image_set(char *map, t_data *vars);
+void	define_images(t_data *vars);
 
-void	ft_clean_buff(char *buff);
+int		map_width(char *map, t_data	*vars);
 
-int		map_width(char *map, t_data	vars);
-int		check_line_end(char *buffer);
+
 #endif

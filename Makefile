@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+         #
+#    By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/05/28 18:19:25 by anne-sophie      ###   ########.fr        #
+#    Updated: 2022/05/29 16:33:33 by mgranate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ CC			=	clang
 SRCS		=	srcs/main.c \
 				srcs/error_check.c \
 				srcs/read_map.c \
+				srcs/input_img.c
 
 LIBFT		=	libft/libft.a
 PRINTF		=	printf/libftprintf.a
