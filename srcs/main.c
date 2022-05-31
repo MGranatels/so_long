@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 18:57:52 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/31 22:21:27 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/01 00:05:34 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static void	player_pos(t_data *vars)
 			{
 				vars->p_i = i;
 				vars->p_j = j;
+				printf("Hight cord: j== %d i == %d\n", (vars->p_j), vars->p_i);
 				b00l = 1;
 				vars->map.map[i][j] = '0';
 			}

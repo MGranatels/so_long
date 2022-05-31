@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_img.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:22:42 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/31 22:21:00 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/01 00:17:18 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
