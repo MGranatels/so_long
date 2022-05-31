@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:26:26 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/31 21:59:03 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/31 22:02:17 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,6 @@ int	ft_close(int keycode, t_data *vars)
 
 int	check_key(int key, t_data *vars)
 {
-	int	i;
-	int	j;
-
-	ft_printf("KEY == %d\n", key);
-	i = 0;
-	j = 0;
 	int k;
 	k=0;
 	if (key == A)
@@ -38,6 +32,7 @@ int	check_key(int key, t_data *vars)
 		vars->map.map[vars->p_i][vars->p_j] = '0';
 		vars->map.map[vars->p_i][vars->p_j - 1] = 'P';
 		vars->p_j--;
+		image_set(vars);
 		while (vars->map.map[k])
 		{
 			ft_printf("Vars[map] == %s",vars->map.map[k]);

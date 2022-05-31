@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 18:57:52 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/31 21:57:47 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/31 22:02:41 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ int	main( int ac, char **av)
 		image_set(&vars);
 		mlx_hook(vars.win, KEYPRESS, 0, &check_key , &vars);
 		mlx_key_hook(vars.win, ft_close, &vars);
-		//image_set(&vars);
 		mlx_loop(vars.mlx);
 	}
 }
