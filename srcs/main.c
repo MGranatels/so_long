@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 18:57:52 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/31 22:02:41 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/31 22:21:27 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static void	player_pos(t_data *vars)
 				vars->p_i = i;
 				vars->p_j = j;
 				b00l = 1;
+				vars->map.map[i][j] = '0';
 			}
 			else if (vars->map.map[i][j] == 'P' && b00l == 1)
 				vars->map.map[i][j] = '0';

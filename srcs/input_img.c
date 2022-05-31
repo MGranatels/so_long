@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:22:42 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/31 21:35:59 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/31 22:21:00 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,9 @@ void	image_set(t_data *vars)
 				mlx_put_image_to_window(vars->mlx, vars->win, vars->img.wall, 64 * j, 64 * i);
 			else
 				mlx_put_image_to_window(vars->mlx, vars->win, vars->img.path, 64 * j, 64 * i);
-			if (vars->map.map[i][j] == 'P')
-				mlx_put_image_to_window(vars->mlx, vars->win, vars->img.player, 64 * j, 64 * i);
 			j++;
 		}		
 		i++;
 	}
+	mlx_put_image_to_window(vars->mlx, vars->win, vars->img.player, 64 * vars->p_j, 64 * vars->p_i);
 }

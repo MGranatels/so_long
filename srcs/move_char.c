@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:26:26 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/31 22:02:17 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/31 22:18:23 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	check_key(int key, t_data *vars)
 	k=0;
 	if (key == A)
 	{
-		vars->map.map[vars->p_i][vars->p_j] = '0';
-		vars->map.map[vars->p_i][vars->p_j - 1] = 'P';
+		//vars->map.map[vars->p_i][vars->p_j] = '0';
+		//vars->map.map[vars->p_i][vars->p_j - 1] = 'P';
 		vars->p_j--;
 		image_set(vars);
 		while (vars->map.map[k])
