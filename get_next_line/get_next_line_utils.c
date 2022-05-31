@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 14:10:23 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/28 18:56:12 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/05/31 19:47:43 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,11 @@ size_t	ft_strlen_get(const char *str)
 {
 	size_t	i;
 
-	i = 0;
+	i = -1;
 	if (!str)
 		return (0);
-	while (str[i])
-	{
-		if (str[i] == '\n')
-			return (i + 1);
-		i++;
-	}
+	while (str[++i] && str[i] != '\n')
+		;
 	return (i);
 }
 

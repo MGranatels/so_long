@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:44:34 by anne-sophie       #+#    #+#             */
-/*   Updated: 2022/05/29 18:38:39 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/05/31 20:24:15 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,14 @@ static int check_map_middle(char *line, int width)
     return (1);
 }
 
-static int check_begin_line(char *line, int width)
+static int check_begin_line(char *line, t_data *vars)
 {
-    while ((width - 1) > -1)
+    int width;
+
+    width = vars->win_width - 1;
+    while ((width) > -1)
     {
-        if  (line[width - 1] != '1')
+        if  (line[width] != '1')
         {
             ft_printf("Error\n");
             ft_printf("MAP Has Missing Walls\n");
@@ -50,40 +53,36 @@ static int check_begin_line(char *line, int width)
     return (1);
 }
 
-static int check_end_line(char *map, int height, int width)
+static int check_end_line(char *map, t_data *vars)
 {
     int     fd;
-    char    *line;
-    
+    int     i;
+
+	vars->map.map = (char **)malloc((vars->win_height + 1) * sizeof(char *));
+    i = 0;
     fd = open(map, O_RDONLY);
-    while (height > 0)
-    {
-        line = get_next_line(fd);
-        height--;
-    }
-    if (!check_begin_line(line, width))
+    while ((vars->map.map[i] = get_next_line(fd)))
+        i++;
+    if (!check_begin_line(vars->map.map[i - 1] , vars))
         return (0);
     return (1);
 }
 
-static int check_dimensions(char *line, int width, t_data *vars, int fd)
+static int check_dimensions(char *line, t_data *vars, int fd)
 {
     int cp;
     
-    while (1)
+    while ((line = get_next_line(fd)))
     {
-        line = get_next_line(fd);
-        if (!line)
-            break ;
-        cp =  ft_strlen(line) - 1;
+        cp =  ft_strlen_get(line);
         vars->win_height++;
-        if (cp != width)
+        if (cp != vars->win_width)
         {
             ft_printf("Error\n");
             ft_printf("Incorrect Map Dimensions\n");
             return (0);
         }
-        if(!check_map_middle(line, width))
+        if(!check_map_middle(line, vars->win_width))
             return (0);
     }
     return (1);
@@ -97,12 +96,12 @@ int map_width(char *map, t_data	*vars)
     vars->win_height = 1;
     fd = open(map, O_RDONLY);
     str = get_next_line(fd);
-    vars->win_width = ft_strlen(str) - 1;
-    if (!check_dimensions(str, vars->win_width, vars, fd))
+    vars->win_width = ft_strlen_get(str);
+    if (!check_dimensions(str, vars, fd))
         return (0);
-    if (!check_begin_line(str, vars->win_width))
+    if (!check_begin_line(str, vars))
         return (0);
-    if (!check_end_line(map, vars->win_height, vars->win_width))
+    if (!check_end_line(map, vars))
         return (0);
     return (1);
 }

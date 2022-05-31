@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 14:38:46 by mgranate          #+#    #+#             */
-/*   Updated: 2022/05/28 18:15:54 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/05/31 19:51:51 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ char	*get_next_line(int fd)
 // 	while (1)
 // 	{
 // 		str = get_next_line(fd);
-// 		printf("Line %i: %s", i, str);
+// 		printf("Line %i: %s\n", i, str);
+// 		printf("LENGHT = %lu\n", ft_strlen_get(str));
 // 		if (!str)
 // 			break ;
 // 		free(str);

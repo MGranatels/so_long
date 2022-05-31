@@ -6,7 +6,7 @@
 #    By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/05/29 16:33:33 by mgranate         ###   ########.fr        #
+#    Updated: 2022/05/31 20:02:31 by mgranate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,16 +14,17 @@
 NAME		=	so_long
 CC			=	clang
 
-SRCS		=	srcs/main.c \
+SRCS		=	srcs/main.c		   \
 				srcs/error_check.c \
-				srcs/read_map.c \
-				srcs/input_img.c
+				srcs/read_map.c	   \
+				srcs/input_img.c   \
+				srcs/move_char.c
 
 LIBFT		=	libft/libft.a
 PRINTF		=	printf/libftprintf.a
 GNL			=	get_next_line/get_next_line.a
 
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -g
 MLXFLAGS	=	-L ./mlx/ -lmlx -framework OpenGL -framework AppKit -lz
 
 RM			=	rm -f

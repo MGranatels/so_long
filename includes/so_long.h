@@ -29,13 +29,14 @@
 # define ARROW_BOT 65364
 # define ARROW_LEFT 65361
 # define ARROW_RIGHT 65363
-# define A 97
-# define D 100
-# define S 115
-# define W 119
+# define A 0
+# define D 2
+# define S 1
+# define W 13
 # define FOE "assets/foe.xpm"
-# define PLAYER "assets/player.xpm"
+# define PLAYER "images/char2.xpm"
 # define EXIT 53
+# define KEYPRESS 2
 
 typedef struct s_map
 {
@@ -81,10 +82,12 @@ typedef struct s_data
 #  define BUFFER_SIZE 1024
 # endif
 
-void	image_set(char *map, t_data *vars);
+void	image_set(t_data *vars);
 void	define_images(t_data *vars);
 
+int		check_key(int key, t_data *vars);
 int		map_width(char *map, t_data	*vars);
+int		ft_close(int keycode, t_data *vars);
 
 
 #endif
