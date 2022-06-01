@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/05/31 20:02:31 by mgranate         ###   ########.fr        #
+#    Updated: 2022/06/01 01:27:13 by anne-sophie      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,8 @@ fclean:		clean
 			$(RM) $(NAME)
 			$(RM) *.out
 			make fclean -C libft/
+			make fclean -C printf/
+			make fclean -C get_next_line/
 
 re:			fclean all
 

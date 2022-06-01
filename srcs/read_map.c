@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:44:34 by anne-sophie       #+#    #+#             */
-/*   Updated: 2022/05/31 20:24:15 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/01 02:46:03 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 
-static int check_map_middle(char *line, int width)
+static int check_map_middle(char *line, int width, t_data *vars)
 {
     width = width - 1;
     if (line[width] != '1' || line[0] != '1')
@@ -30,6 +30,8 @@ static int check_map_middle(char *line, int width)
             ft_printf("Wrong MAP Configuration\n");
             return (0);
         }
+        if (line[width] == 'C')
+            vars->map.clt++;
         width--;
     }
     return (1);
@@ -82,7 +84,7 @@ static int check_dimensions(char *line, t_data *vars, int fd)
             ft_printf("Incorrect Map Dimensions\n");
             return (0);
         }
-        if(!check_map_middle(line, vars->win_width))
+        if(!check_map_middle(line, vars->win_width, vars))
             return (0);
     }
     return (1);

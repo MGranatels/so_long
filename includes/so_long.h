@@ -46,7 +46,7 @@ typedef struct s_map
 	char	*path;
 	char	**map;
 	int		can_exit;
-	int		collected;
+	int		clt;
 
 }				t_map;
 
@@ -56,6 +56,7 @@ typedef struct s_img
 	int		width;
 	int		height;
 	void	*wall;
+	void	*clt;
 	void	*exit_l;
 	void	*player;
 	void	*path;
