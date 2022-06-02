@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 18:57:52 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/01 00:05:34 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/06/02 18:34:03 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ static void	player_pos(t_data *vars)
 	i = 0;
 	j = 0;
 	b00l = 0;
+	vars->stp = 0;
 	while (vars->map.map[i])
 	{
 		j = 0;

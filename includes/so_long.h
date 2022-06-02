@@ -59,6 +59,9 @@ typedef struct s_img
 	void	*clt;
 	void	*exit_l;
 	void	*player;
+	void	*playerR;
+	void	*playerL;
+	void	*playerB;
 	void	*path;
 
 }	t_img;
@@ -67,7 +70,7 @@ typedef struct s_data
 {
 	void	*mlx;
 	void	*win;
-	int		steps_count;
+	int		stp;
 	int		p_i;
 	int		p_j;
 	int		i;

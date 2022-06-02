@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_char.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:26:26 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/01 02:51:14 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/06/02 18:34:33 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,24 +58,33 @@ int	check_key(int key, t_data *vars)
 		consumable(vars, key);
 		vars->p_j--;
 		image_set(vars);
+		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.playerL, 64 * vars->p_j, 64 * vars->p_i);
+		vars->stp++;
 	}
 	else if (key == W && vars->map.map[vars->p_i - 1][vars->p_j] != '1')
 	{
 		consumable(vars, key);	
 		vars->p_i--;
 		image_set(vars);
+		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.playerB, 64 * vars->p_j, 64 * vars->p_i);
+		vars->stp++;
 	}
 	else if (key == S && vars->map.map[vars->p_i + 1][vars->p_j] != '1')
 	{	
 		consumable(vars, key);
 		vars->p_i++;
 		image_set(vars);
+		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.player, 64 * vars->p_j, 64 * vars->p_i);
+		vars->stp++;
 	}
 	else if (key == D && vars->map.map[vars->p_i][vars->p_j + 1] != '1')
 	{	
 		consumable(vars, key);
 		vars->p_j++;
 		image_set(vars);
+		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.playerR, 64 * vars->p_j, 64 * vars->p_i);
+		vars->stp++;
 	}					
+	ft_printf("%d\n", vars->stp);
 	return (0);
 }
