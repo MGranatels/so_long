@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:22:42 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/02 17:40:16 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/02 18:45:50 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ void	image_set(t_data *vars)
 		}		
 		i++;
 	}
-	//mlx_put_image_to_window(vars->mlx, vars->win, vars->img.player, 64 * vars->p_j, 64 * vars->p_i);
+	if (vars->stp == 0)
+		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.player, 64 * vars->p_j, 64 * vars->p_i);
 }
