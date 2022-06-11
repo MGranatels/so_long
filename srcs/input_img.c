@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:22:42 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/02 18:45:50 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/11 18:38:29 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	define_images(t_data *vars)
 	vars->img.path = mlx_xpm_file_to_image(vars->mlx, "images/Ground4.xpm", &vars->img.width, &vars->img.height);
 	vars->img.exit_l = mlx_xpm_file_to_image(vars->mlx, "images/exit.xpm", &vars->img.width, &vars->img.height);
 	vars->img.clt = mlx_xpm_file_to_image(vars->mlx, "images/Collectable.xpm", &vars->img.width, &vars->img.height);
+	vars->img.eny = mlx_xpm_file_to_image(vars->mlx, "images/enemy.xpm", &vars->img.width, &vars->img.height);
+	vars->img.blood = mlx_xpm_file_to_image(vars->mlx, "images/blood.xpm", &vars->img.width, &vars->img.height);
 }
 
 
@@ -49,6 +51,8 @@ void	image_set(t_data *vars)
 				mlx_put_image_to_window(vars->mlx, vars->win, vars->img.exit_l, 64 * j, 64 * i);
 			if (vars->map.map[i][j] == 'C')
 				mlx_put_image_to_window(vars->mlx, vars->win, vars->img.clt, 64 * j, 64 * i);
+			if (vars->map.map[i][j] == 'N')
+				mlx_put_image_to_window(vars->mlx, vars->win, vars->img.eny, 64 * j, 64 * i);
 			j++;
 		}		
 		i++;

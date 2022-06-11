@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:44:34 by anne-sophie       #+#    #+#             */
-/*   Updated: 2022/06/01 02:46:03 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/06/11 18:32:46 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int check_map_middle(char *line, int width, t_data *vars)
     while (width > -1)
     {
         if (line[width] != '1' && line[width] != '0' && line[width] != 'C' 
-        && line[width] != 'E' && line[width] != 'P')
+        && line[width] != 'E' && line[width] != 'P' &&line[width] != 'N')
         {
             ft_printf("Error\n");
             ft_printf("Wrong MAP Configuration\n");
@@ -87,6 +87,7 @@ static int check_dimensions(char *line, t_data *vars, int fd)
         if(!check_map_middle(line, vars->win_width, vars))
             return (0);
     }
+    free(line);
     return (1);
 }
 

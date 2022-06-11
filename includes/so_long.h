@@ -62,7 +62,11 @@ typedef struct s_img
 	void	*playerR;
 	void	*playerL;
 	void	*playerB;
+	void	*blood;
+	void	*eny;
 	void	*path;
+	void	*win_w;
+	void	*win_b;
 
 }	t_img;
 
@@ -75,6 +79,7 @@ typedef struct s_data
 	int		p_j;
 	int		i;
 	int		j;
+	int		e;
 	int		win_height;
 	int		win_width;
 	t_img	img;

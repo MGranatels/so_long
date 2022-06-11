@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 18:57:52 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/02 18:44:36 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/11 19:08:01 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int	main( int ac, char **av)
 	t_data	vars;
 	t_img	*img;
 	
+	vars.e = 0;
 	if (ac == 2)
 	{
 		img = NULL;
@@ -54,7 +55,7 @@ int	main( int ac, char **av)
 		if (!map_width(av[1], &vars))
 			return (0);
 		vars.mlx = mlx_init();
-		vars.win = mlx_new_window(vars.mlx, (64 * vars.win_width), (64 * vars.win_height), "My Game");
+		vars.win = mlx_new_window(vars.mlx, (64 * vars.win_width), (64 * vars.win_height), "Ghiga World");
 		player_pos(&vars);
 		define_images(&vars);
 		image_set(&vars);
