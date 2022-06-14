@@ -49,6 +49,21 @@ typedef struct s_map
 	int		clt;
 
 }				t_map;
+typedef struct s_nub
+{
+	void *frame;
+	void *n0;
+	void *n1;
+	void *n2;
+	void *n3;
+	void *n4;
+	void *n5;
+	void *n6;
+	void *n7;
+	void *n8;
+	void *n9;
+
+}	t_nub;
 
 typedef struct s_img
 {
@@ -58,6 +73,7 @@ typedef struct s_img
 	void	*wall;
 	void	*clt;
 	void	*exit_l;
+	void	*exit_o;
 	void	*player;
 	void	*playerR;
 	void	*playerL;
@@ -77,6 +93,8 @@ typedef struct s_data
 	int		stp;
 	int		p_i;
 	int		p_j;
+	int		e_i;
+	int		e_j;
 	int		i;
 	int		j;
 	int		e;
@@ -84,7 +102,7 @@ typedef struct s_data
 	int		win_width;
 	t_img	img;
 	t_map	map;
-
+	t_nub   nub;
 }				t_data;
 
 # ifndef BUFFER_SIZE
@@ -93,10 +111,12 @@ typedef struct s_data
 
 void	image_set(t_data *vars);
 void	define_images(t_data *vars);
+void	set_variables(t_data *vars, int key);
+void	define_numbers(t_data *vars);
 
 int		check_key(int key, t_data *vars);
+int		check_key_nub(t_data *vars);
 int		map_width(char *map, t_data	*vars);
 int		ft_close(int keycode, t_data *vars);
-
 
 #endif

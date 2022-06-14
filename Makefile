@@ -6,7 +6,7 @@
 #    By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/06/01 01:27:13 by anne-sophie      ###   ########.fr        #
+#    Updated: 2022/06/14 17:19:49 by anne-sophie      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		=	so_long
 CC			=	clang
 
 SRCS		=	srcs/main.c		   \
-				srcs/error_check.c \
+				srcs/exit_check.c \
 				srcs/read_map.c	   \
 				srcs/input_img.c   \
 				srcs/move_char.c
