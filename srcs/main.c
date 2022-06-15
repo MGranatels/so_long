@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 18:57:52 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/14 20:44:41 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/06/15 19:11:29 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,8 @@ static void	player_pos(t_data *vars)
 	int	i;
 	int	j;
 	int	b00l;
-	
+
 	i = 0;
-	j = 0;
 	b00l = 0;
 	vars->stp = 0;
 	while (vars->map.map[i])
@@ -46,7 +45,7 @@ int	main( int ac, char **av)
 {
 	t_data	vars;
 	t_img	*img;
-	
+
 	vars.e = 0;
 	if (ac == 2)
 	{
@@ -55,11 +54,13 @@ int	main( int ac, char **av)
 		if (!map_width(av[1], &vars))
 			return (0);
 		vars.mlx = mlx_init();
-		vars.win = mlx_new_window(vars.mlx, (64 * vars.win_width), (64 * vars.win_height), "Ghiga World");
+		vars.win = mlx_new_window(vars.mlx, (64 * vars.win_width),
+				(64 * vars.win_height), "Ghiga World");
 		player_pos(&vars);
 		define_images(&vars);
 		image_set(&vars);
-		mlx_hook(vars.win, KEYPRESS, 0, &check_key , &vars);
+		mlx_hook(vars.win, KEYPRESS, 0, check_key, &vars);
+		mlx_hook(vars.win, 17, 1l << 2, close_window, &vars);
 		mlx_key_hook(vars.win, ft_close, &vars);
 		mlx_loop(vars.mlx);
 	}

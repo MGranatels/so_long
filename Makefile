@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+         #
+#    By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/06/14 17:19:49 by anne-sophie      ###   ########.fr        #
+#    Updated: 2022/06/15 16:43:37 by mgranate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,12 @@
 NAME		=	so_long
 CC			=	clang
 
-SRCS		=	srcs/main.c		   \
-				srcs/exit_check.c \
-				srcs/read_map.c	   \
-				srcs/input_img.c   \
-				srcs/move_char.c
+SRCS		=	srcs/main.c			\
+				srcs/exit_check.c	\
+				srcs/read_map.c		\
+				srcs/input_img.c	\
+				srcs/move_char.c	\
+				srcs/key_check.c
 
 LIBFT		=	libft/libft.a
 PRINTF		=	printf/libftprintf.a

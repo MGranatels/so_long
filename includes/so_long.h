@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/15 16:41:47 by mgranate          #+#    #+#             */
+/*   Updated: 2022/06/15 19:13:16 by mgranate         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -51,17 +63,17 @@ typedef struct s_map
 }				t_map;
 typedef struct s_nub
 {
-	void *frame;
-	void *n0;
-	void *n1;
-	void *n2;
-	void *n3;
-	void *n4;
-	void *n5;
-	void *n6;
-	void *n7;
-	void *n8;
-	void *n9;
+	void	*frame;
+	void	*n0;
+	void	*n1;
+	void	*n2;
+	void	*n3;
+	void	*n4;
+	void	*n5;
+	void	*n6;
+	void	*n7;
+	void	*n8;
+	void	*n9;
 
 }	t_nub;
 
@@ -75,9 +87,9 @@ typedef struct s_img
 	void	*exit_l;
 	void	*exit_o;
 	void	*player;
-	void	*playerR;
-	void	*playerL;
-	void	*playerB;
+	void	*playerr;
+	void	*playerl;
+	void	*playerb;
 	void	*blood;
 	void	*eny;
 	void	*path;
@@ -102,7 +114,7 @@ typedef struct s_data
 	int		win_width;
 	t_img	img;
 	t_map	map;
-	t_nub   nub;
+	t_nub	nub;
 }				t_data;
 
 # ifndef BUFFER_SIZE
@@ -113,10 +125,18 @@ void	image_set(t_data *vars);
 void	define_images(t_data *vars);
 void	set_variables(t_data *vars, int key);
 void	define_numbers(t_data *vars);
+void	consumable(t_data *vars, int key);
 
 int		check_key(int key, t_data *vars);
 int		check_key_nub(t_data *vars);
 int		map_width(char *map, t_data	*vars);
 int		ft_close(int keycode, t_data *vars);
+
+//enemy key check
+int		key_a_check(t_data *vars);
+int		key_w_check(t_data *vars);
+int		key_s_check(t_data *vars);
+int		key_d_check(t_data *vars);
+int		close_window(t_data *vars);
 
 #endif
