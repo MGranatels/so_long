@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 16:41:47 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/15 19:13:16 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/16 17:34:33 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,10 @@ void	define_images(t_data *vars);
 void	set_variables(t_data *vars, int key);
 void	define_numbers(t_data *vars);
 void	consumable(t_data *vars, int key);
+
+//free memory
+void	free_map(t_data *vars);
+void    free_mlx(t_data *vars);
 
 int		check_key(int key, t_data *vars);
 int		check_key_nub(t_data *vars);

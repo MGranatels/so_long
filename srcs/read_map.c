@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 16:44:34 by anne-sophie       #+#    #+#             */
-/*   Updated: 2022/06/11 18:32:46 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/16 17:44:26 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static int check_map_middle(char *line, int width, t_data *vars)
     {
         ft_printf("Error\n");
         ft_printf("MAP Has Missing Walls\n");
+        free(line);
         return (0); 
     }
     while (width > -1)
@@ -28,6 +29,7 @@ static int check_map_middle(char *line, int width, t_data *vars)
         {
             ft_printf("Error\n");
             ft_printf("Wrong MAP Configuration\n");
+            free(line);
             return (0);
         }
         if (line[width] == 'C')
@@ -61,6 +63,8 @@ static int check_end_line(char *map, t_data *vars)
     int     i;
 
 	vars->map.map = (char **)malloc((vars->win_height + 1) * sizeof(char *));
+    if (!vars->map.map)
+        return (0);
     i = 0;
     fd = open(map, O_RDONLY);
     while ((vars->map.map[i] = get_next_line(fd)))
@@ -82,6 +86,7 @@ static int check_dimensions(char *line, t_data *vars, int fd)
         {
             ft_printf("Error\n");
             ft_printf("Incorrect Map Dimensions\n");
+            free(line);
             return (0);
         }
         if(!check_map_middle(line, vars->win_width, vars))

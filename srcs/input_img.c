@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_img.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:22:42 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/15 17:14:39 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/16 18:38:35 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	define_images(t_data *vars)
 			&vars->img.width, &vars->img.height);
 }
 
-void	image_set3(t_data *vars, int i, int j)
+static void	image_set3(t_data *vars, int i, int j)
 {
 	if (vars->map.map[i][j] == 'C')
 		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.clt,
@@ -53,7 +53,7 @@ void	image_set3(t_data *vars, int i, int j)
 			64 * j, 64 * i);
 }
 
-void	image_set2(t_data *vars, int i, int j)
+static void	image_set2(t_data *vars, int i, int j)
 {
 	if (vars->map.map[i][j] == '1')
 	{

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/06/15 16:43:37 by mgranate         ###   ########.fr        #
+#    Updated: 2022/06/16 17:44:00 by anne-sophie      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS		=	srcs/main.c			\
 				srcs/read_map.c		\
 				srcs/input_img.c	\
 				srcs/move_char.c	\
+				srcs/free_stuff.c   \
 				srcs/key_check.c
 
 LIBFT		=	libft/libft.a

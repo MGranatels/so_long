@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 17:20:10 by anne-sophie       #+#    #+#             */
-/*   Updated: 2022/06/15 19:23:14 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/17 09:07:56 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	ft_close(int keycode, t_data *vars)
 		vars->e = 1;
 		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.exit_o,
 			64 * vars->e_j, 64 * vars->e_i);
-		// sleep(2);
 		mlx_destroy_window(vars->mlx, vars->win);
 		exit(0);
 	}

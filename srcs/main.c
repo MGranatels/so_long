@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mgranate <mgranate@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 18:57:52 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/15 19:11:29 by mgranate         ###   ########.fr       */
+/*   Updated: 2022/06/16 18:35:04 by anne-sophie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,10 @@ static void	player_pos(t_data *vars)
 int	main( int ac, char **av)
 {
 	t_data	vars;
-	t_img	*img;
-
-	vars.e = 0;
+	
 	if (ac == 2)
 	{
-		img = NULL;
+		vars.e = 0;
 		vars.win_width = 0;
 		if (!map_width(av[1], &vars))
 			return (0);
