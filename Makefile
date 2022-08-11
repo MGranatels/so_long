@@ -12,7 +12,7 @@
 
 # /* ~~~~~~ SOURCES ~~~~~~ */
 NAME		=	so_long
-CC			=	clang
+CC			=	gcc
 
 SRCS		=	srcs/main.c			\
 				srcs/exit_check.c	\
@@ -26,15 +26,16 @@ LIBFT		=	libft/libft.a
 PRINTF		=	printf/libftprintf.a
 GNL			=	get_next_line/get_next_line.a
 
-CFLAGS		=	-Wall -Wextra -Werror -g
+CFLAGS		=	-Wall -Wextra -Werror -g 
 MLXFLAGS	=	-L ./mlx/ -lmlx -framework OpenGL -framework AppKit -lz
+MLX 		=	mlx/libmlx.a
 
 RM			=	rm -f
 
 OBJS		=	$(SRCS:%.c=%.o)
 
 ifeq ($(shell uname), Linux)
-MLXFLAGS	=	-L ./mlx_linux/ -lmlx -Ilmlx -lXext -lX11
+MLXFLAGS	=	-L ./mlx/ -lmlx -Ilmlx -lXext -lX11
 endif
 
 # /* ~~~~~~~ Colors ~~~~~~~ */
@@ -53,10 +54,14 @@ $(NAME):	$(OBJS)
 			@make -C libft
 			@make -C printf
 			@make -C get_next_line
+			@make -C mlx
 			@make clean -C libft
 			@make clean -C printf
 			@make clean -C get_next_line
+
 			$(CC) $(SRCS) $(LIBFT) $(PRINTF) $(GNL) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
+
+
 
 clean:
 			@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC)

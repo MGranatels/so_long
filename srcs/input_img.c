@@ -89,7 +89,7 @@ void	image_set(t_data *vars)
 		{
 			image_set2(vars, i, j);
 			j++;
-		}		
+		}
 		i++;
 	}
 	mlx_put_image_to_window(vars->mlx, vars->win, vars->nub.frame, 10, 10);

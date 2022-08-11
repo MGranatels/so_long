@@ -41,13 +41,13 @@
 # define ARROW_BOT 65364
 # define ARROW_LEFT 65361
 # define ARROW_RIGHT 65363
-# define A 0
-# define D 2
-# define S 1
-# define W 13
+# define A 97
+# define D 100
+# define S 115
+# define W 119
 # define FOE "assets/foe.xpm"
 # define PLAYER "images/char2.xpm"
-# define EXIT 53
+# define EXIT 65307
 # define KEYPRESS 2
 
 typedef struct s_map
@@ -133,7 +133,7 @@ void    free_mlx(t_data *vars);
 
 int		check_key(int key, t_data *vars);
 int		check_key_nub(t_data *vars);
-int		map_width(char *map, t_data	*vars);
+int		map_making(char *map, t_data *vars);
 int		ft_close(int keycode, t_data *vars);
 
 //enemy key check

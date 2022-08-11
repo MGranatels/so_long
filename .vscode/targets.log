@@ -1,0 +1,441 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-unknown-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Aug 11 20:37:56 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+GNOME_KEYRING_CONTROL = /nfs/homes/mgranate/.cache/keyring-TLVSQ1
+# environment
+SBX_CHROME_API_RQ = 1
+# environment
+VSCODE_CWD = /nfs/homes/mgranate
+# makefile (from 'Makefile', line 27)
+GNL = get_next_line/get_next_line.a
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /nfs/homes/mgranate/Desktop/so_long
+# environment
+ZYPAK_ZYGOTE_STRATEGY_SPAWN = 1
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+GI_TYPELIB_PATH = /app/lib/girepository-1.0
+# makefile (from 'Makefile', line 48)
+EOC := "\033[0;0m"
+# environment
+XDG_DATA_DIRS = /app/share:/usr/share:/usr/share/runtime/share:/run/host/user-share:/run/host/share
+ 
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /nfs/homes/mgranate/.var/app/com.visualstudio.code/config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session45
+# makefile (from 'Makefile', line 25)
+LIBFT = libft/libft.a
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/flatpak/Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/include
+# makefile (from 'Makefile', line 46)
+CYAN := "\033[1;36m"
+# environment
+ALSA_CONFIG_DIR = /usr/share/alsa
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ZYPAK_SPAWN_LATEST_ON_REEXEC = 0
+# makefile
+CURDIR := /nfs/homes/mgranate/Desktop/so_long
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# makefile (from 'Makefile', line 17)
+SRCS = srcs/main.c srcs/exit_check.c srcs/read_map.c srcs/input_img.c srcs/move_char.c srcs/free_stuff.c srcs/key_check.c
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+ZYPAK_LIB = /app/bin/../lib
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/flatpak/ssh-auth
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /app/etc/xdg:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+ALSA_CONFIG_PATH = /usr/share/alsa/alsa-flatpak.conf
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# environment
+FLATPAK_SANDBOX_DIR = /nfs/homes/mgranate/.var/app/com.visualstudio.code/sandbox
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 24
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_10859_YDwPin
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+AT_SPI_BUS_ADDRESS = unix:path=/run/flatpak/at-spi-bus
+# environment
+XDG_DATA_HOME = /nfs/homes/mgranate/.var/app/com.visualstudio.code/data
+# environment
+SANDBOX_LD_PRELOAD = /app/bin/../lib/libzypak-preload-host.so:/app/bin/../lib/libzypak-preload-host-spawn-strategy.so
+# environment
+SESSION_MANAGER = local/c2r5s4.42lisboa.com:@/tmp/.ICE-unix/1600707,unix/c2r5s4.42lisboa.com:/tmp/.ICE-unix/1600707
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/flatpak/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+__EGL_EXTERNAL_PLATFORM_CONFIG_DIRS = /etc/egl/egl_external_platform.d:/usr/lib/x86_64-linux-gnu/GL/egl/egl_external_platform.d:/usr/share/egl/egl_external_platform.d
+# default
+MAKE_HOST := x86_64-unknown-linux-gnu
+# makefile (from 'Makefile', line 35)
+OBJS = $(SRCS:%.c=%.o)
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+LD_LIBRARY_PATH = /app/lib
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SANDBOX_LD_LIBRARY_PATH = /app/lib
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /app/bin:/app/bin:/app/bin:/usr/bin:/nfs/homes/mgranate/.var/app/com.visualstudio.code/data/node_modules/bin
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+DBUS_SYSTEM_BUS_ADDRESS = unix:path=/run/dbus/system_bus_socket
+# makefile (from 'Makefile', line 45)
+PURPLE := "\033[1;35m"
+# environment
+XDG_CONFIG_HOME = /nfs/homes/mgranate/.var/app/com.visualstudio.code/config
+# makefile (from 'Makefile', line 44)
+GREEN := "\033[1;32m"
+# makefile (from 'Makefile', line 31)
+MLX = mlx/libmlx.a
+# environment
+DOCKER_HOST = unix:///run/user/10859/docker.sock
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 14)
+NAME = so_long
+# makefile (from 'Makefile', line 26)
+PRINTF = printf/libftprintf.a
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+GST_PLUGIN_SYSTEM_PATH = /app/lib/gstreamer-1.0:/usr/lib/extensions/gstreamer-1.0:/usr/lib/x86_64-linux-gnu/gstreamer-1.0
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# makefile (from 'Makefile', line 42)
+BLACK := "\033[1;30m"
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 38)
+MLXFLAGS = -L ./mlx/ -lmlx -Ilmlx -lXext -lX11
+# environment
+LOGNAME = mgranate
+# environment
+container = flatpak
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from 'Makefile', line 33)
+RM = rm -f
+# makefile (from 'Makefile', line 43)
+RED := "\033[1;31m"
+# environment
+NPM_CONFIG_GLOBALCONFIG = /app/etc/npmrc
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+USER = mgranate
+# environment
+DISPLAY = :99.0
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1601736
+# environment
+SSH_AGENT_PID = 1600806
+# environment
+_ = /usr/bin/make
+# environment
+XDG_RUNTIME_DIR = /run/user/10859
+# makefile (from 'Makefile', line 29)
+CFLAGS = -Wall -Wextra -Werror -g 
+# environment
+GPG_AGENT_INFO = /run/user/10859/gnupg/S.gpg-agent:0:1
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /nfs/homes/mgranate
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/10859/vscode-9046cdbc-1.69.2-main.sock
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+XDG_CACHE_HOME = /nfs/homes/mgranate/.var/app/com.visualstudio.code/cache
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/mgranate
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 15)
+CC = gcc
+# environment
+FLATPAK_ID = com.visualstudio.code
+# environment
+XDG_MENU_PREFIX = gnome-
+# makefile (from 'Makefile', line 47)
+WHITE := "\033[1;37m"
+# environment
+ZYPAK_BIN = /app/bin
+# environment
+GDMSESSION = ubuntu
+# variable set hash-table stats:
+# Load=131/1024=13%, Rehash=0, Collisions=23/167=14%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 64768, inode 11276194): 17 files, no impossibilities.
+
+# 17 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+srcs/main.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 20:36:32.021275564
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+srcs/key_check.o:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-08-11 20:36:32.205276082
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+srcs/exit_check.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 20:36:32.065275688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 20:36:28.01326434
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+srcs/move_char.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 20:36:32.149275925
+#  File has been updated.
+#  Successfully updated.
+
+so_long: srcs/main.o srcs/exit_check.o srcs/read_map.o srcs/input_img.o srcs/move_char.o srcs/free_stuff.o srcs/key_check.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-11 20:36:33.213278924
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+			@echo $(CYAN) " - Compiling $@" $(RED)
+			@make -C libft
+			@make -C printf
+			@make -C get_next_line
+			@make -C mlx
+			@make clean -C libft
+			@make clean -C printf
+			@make clean -C get_next_line
+			$(CC) $(SRCS) $(LIBFT) $(PRINTF) $(GNL) $(MLXFLAGS) $(CFLAGS) -o $(NAME)
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 67):
+			@echo $(PURPLE) "[🧹Cleaning...🧹]" $(EOC)
+			$(RM) $(OBJS)
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+git:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 81):
+	@git add .
+	@git commit -m "$m"
+	@git push
+	@echo "Commit sent to github"
+
+# Not a target:
+srcs/free_stuff.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 20:36:32.173275992
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: so_long
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 71):
+			@echo $(PURPLE) "[🧹FCleaning...🧹]" $(EOC)
+			$(RM) $(NAME)
+			$(RM) *.out
+			make fclean -C libft/
+			make fclean -C printf/
+			make fclean -C get_next_line/
+
+# Not a target:
+srcs/read_map.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 20:36:32.093275767
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+srcs/input_img.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-11 20:36:32.117275835
+#  File has been updated.
+#  Successfully updated.
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=17/1024=2%, Rehash=0, Collisions=0/44=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 33 / storage = 301 B / avg = 9 B
+# current buf: size = 8162 B / used = 301 B / count = 33 / avg = 9 B
+
+# strcache performance: lookups = 54 / hit rate = 38%
+# hash-table stats:
+# Load=33/8192=0%, Rehash=0, Collisions=0/54=0%
+# Finished Make data base on Thu Aug 11 20:37:56 2022
+
+ 

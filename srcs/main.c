@@ -44,20 +44,26 @@ static void	player_pos(t_data *vars)
 int	main( int ac, char **av)
 {
 	t_data	vars;
-	
+
 	if (ac == 2)
 	{
 		vars.e = 0;
 		vars.win_width = 0;
-		if (!map_width(av[1], &vars))
+		vars.win_height = 0;
+		if (!map_making(av[1], &vars))
+		{
+			free_map(&vars);
 			return (0);
+		}
+		vars.win_width += 1;
+		vars.win_height += 1;
 		vars.mlx = mlx_init();
 		vars.win = mlx_new_window(vars.mlx, (64 * vars.win_width),
 				(64 * vars.win_height), "Ghiga World");
 		player_pos(&vars);
 		define_images(&vars);
 		image_set(&vars);
-		mlx_hook(vars.win, KEYPRESS, 0, check_key, &vars);
+		mlx_hook(vars.win,  2, 1L << 0, check_key, &vars);
 		mlx_hook(vars.win, 17, 1l << 2, close_window, &vars);
 		mlx_key_hook(vars.win, ft_close, &vars);
 		mlx_loop(vars.mlx);

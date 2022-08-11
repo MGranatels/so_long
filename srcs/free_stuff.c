@@ -24,6 +24,7 @@ void	free_map(t_data *vars)
 		free(vars->map.map[i]);
 		i++;
 	}
+	free(vars->map.map[i]);
 	free(vars->map.map);
 }
 

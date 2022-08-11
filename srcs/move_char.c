@@ -70,6 +70,8 @@ void	set_variables(t_data *vars, int key)
 		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.playerr,
 			64 * vars->p_j, 64 * vars->p_i);
 	check_key_nub(vars);
+	if (vars->e == 1)
+		mlx_string_put(vars->mlx, vars->win, 64 * vars->win_width / 2, 64 * vars->win_height / 2, 0x00FFFFFF, "Game Over, Press ESC to Exit");
 }
 
 int	check_key(int key, t_data *vars)

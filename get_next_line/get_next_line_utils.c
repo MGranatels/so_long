@@ -67,12 +67,12 @@ char	*ft_get_line(char *line, char *buff)
 		line[i] = temp[i];
 		i++;
 	}
-	j = 0;
-	while (buff[j])
+	j = -1;
+	while (buff[++j])
 	{
-		line[i++] = buff[j];
-		if (buff[j++] == '\n')
+		if (buff[j] == '\n')
 			break ;
+		line[i++] = buff[j];
 	}
 	line[i] = '\0';
 	if (temp)
