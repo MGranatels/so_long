@@ -3,21 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   exit_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/14 17:20:10 by anne-sophie       #+#    #+#             */
-/*   Updated: 2022/06/17 09:07:56 by anne-sophie      ###   ########.fr       */
+/*   Created: 2022/08/12 15:38:41 by mgranate          #+#    #+#             */
+/*   Updated: 2022/08/12 19:13:36 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
-#include <unistd.h>
 
 int	ft_close(int keycode, t_data *vars)
 {
 	if (keycode == EXIT)
 	{
-		mlx_destroy_window(vars->mlx, vars->win);
+		free_mlx(vars);
 		exit(0);
 	}
 	if (vars->map.clt == 0 && (vars->map.map[vars->p_i - 1][vars->p_j] == 'E'
@@ -34,7 +33,7 @@ int	ft_close(int keycode, t_data *vars)
 		vars->e = 1;
 		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.exit_o,
 			64 * vars->e_j, 64 * vars->e_i);
-		mlx_destroy_window(vars->mlx, vars->win);
+		free_mlx(vars);
 		exit(0);
 	}
 	return (0);
@@ -96,11 +95,11 @@ int	check_key_nub(t_data *vars)
 
 	i = 0;
 	nub = ft_itoa(vars->stp);
-	define_numbers(vars);
 	while (nub[i])
 	{
 		set_number(nub[i], i, vars);
 		i++;
 	}
+	free(nub);
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 16:41:47 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/16 17:34:33 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/08/12 18:29:18 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,12 @@
 
 typedef struct s_map
 {
-	int		fd;
-	int		line_count;
-	size_t	line_len;
-	char	*path;
 	char	**map;
-	int		can_exit;
+	int		exit;
 	int		clt;
-
+	int		p;
 }				t_map;
+
 typedef struct s_nub
 {
 	void	*frame;
@@ -83,7 +80,7 @@ typedef struct s_img
 	int		width;
 	int		height;
 	void	*wall;
-	void	*clt;
+	void	*clt ;
 	void	*exit_l;
 	void	*exit_o;
 	void	*player;
@@ -129,12 +126,17 @@ void	consumable(t_data *vars, int key);
 
 //free memory
 void	free_map(t_data *vars);
-void    free_mlx(t_data *vars);
+void	free_mlx(t_data *vars);
 
+//Map checking and making off
+int		map_making(char *map, t_data *vars);
+int		check_elements(t_data *vars);
+int		check_map_middle(t_data *vars);
+void	check_resources(char cord, t_data *vars);
+
+//Key Press checking
 int		check_key(int key, t_data *vars);
 int		check_key_nub(t_data *vars);
-int		map_making(char *map, t_data *vars);
-int		ft_close(int keycode, t_data *vars);
 
 //enemy key check
 int		key_a_check(t_data *vars);
@@ -142,5 +144,6 @@ int		key_w_check(t_data *vars);
 int		key_s_check(t_data *vars);
 int		key_d_check(t_data *vars);
 int		close_window(t_data *vars);
+int		ft_close(int keycode, t_data *vars);
 
 #endif

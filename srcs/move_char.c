@@ -1,11 +1,12 @@
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   move_char.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:26:26 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/16 18:02:05 by anne-sophie      ###   ########.fr       */
+/*   Created: 2022/08/12 14:47:06 by mgranate          #+#    #+#             */
+/*   Updated: 2022/08/12 14:56:34 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +72,29 @@ void	set_variables(t_data *vars, int key)
 			64 * vars->p_j, 64 * vars->p_i);
 	check_key_nub(vars);
 	if (vars->e == 1)
-		mlx_string_put(vars->mlx, vars->win, 64 * vars->win_width / 2, 64 * vars->win_height / 2, 0x00FFFFFF, "Game Over, Press ESC to Exit");
+		mlx_string_put(vars->mlx, vars->win, 64 * vars->win_width / 2,
+			64 * vars->win_height / 2, 0x00FFFFFF,
+			"Game Over, Press ESC to Exit");
+}
+
+static void	check_key2(int key, t_data *vars)
+{
+	if (key == D)
+	{
+		consumable(vars, key);
+		vars->p_j++;
+		if (!enemy_check(vars, key))
+			vars->e = 1;
+		set_variables(vars, key);
+	}
+	if (key == S)
+	{
+		consumable(vars, key);
+		vars->p_i++;
+		if (!enemy_check(vars, key))
+			vars->e = 1;
+		set_variables(vars, key);
+	}
 }
 
 int	check_key(int key, t_data *vars)
@@ -93,20 +116,8 @@ int	check_key(int key, t_data *vars)
 		set_variables(vars, key);
 	}
 	else if (key == S && key_s_check(vars) == 2)
-	{	
-		consumable(vars, key);
-		vars->p_i++;
-		if (!enemy_check(vars, key))
-			vars->e = 1;
-		set_variables(vars, key);
-	}
+		check_key2(key, vars);
 	else if (key == D && key_d_check(vars) == 2)
-	{	
-		consumable(vars, key);
-		vars->p_j++;
-		if (!enemy_check(vars, key))
-			vars->e = 1;
-		set_variables(vars, key);
-	}	
+		check_key2(key, vars);
 	return (0);
 }

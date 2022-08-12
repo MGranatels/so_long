@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input_img.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 16:22:42 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/16 18:38:35 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/08/12 18:45:11 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,6 @@ static void	image_set2(t_data *vars, int i, int j)
 {
 	if (vars->map.map[i][j] == '1')
 	{
-		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.path,
-			64 * j, 64 * i);
 		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.wall,
 			64 * j, 64 * i);
 	}
@@ -92,7 +90,7 @@ void	image_set(t_data *vars)
 		}
 		i++;
 	}
-	mlx_put_image_to_window(vars->mlx, vars->win, vars->nub.frame, 10, 10);
+	mlx_put_image_to_window(vars->mlx, vars->win, vars->nub.frame, 10, 0);
 	if (vars->stp == 0)
 		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.player,
 			64 * vars->p_j, 64 * vars->p_i);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_check.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mgranate <mgranate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/15 16:31:18 by mgranate          #+#    #+#             */
-/*   Updated: 2022/06/16 18:03:56 by anne-sophie      ###   ########.fr       */
+/*   Updated: 2022/08/12 17:57:10 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 int	close_window(t_data *vars)
 {
 	mlx_destroy_window(vars->mlx, vars->win);
-	exit (0);
-	free_map(vars);
 	free_mlx(vars);
+	exit (0);
 }
 
 int	key_a_check(t_data *vars)

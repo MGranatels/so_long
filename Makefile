@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: anne-sophie <anne-sophie@student.42.fr>    +#+  +:+       +#+         #
+#    By: mgranate <mgranate@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 17:02:19 by mgranate          #+#    #+#              #
-#    Updated: 2022/06/16 17:44:00 by anne-sophie      ###   ########.fr        #
+#    Updated: 2022/08/12 19:01:55 by mgranate         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,14 @@ SRCS		=	srcs/main.c			\
 				srcs/input_img.c	\
 				srcs/move_char.c	\
 				srcs/free_stuff.c   \
-				srcs/key_check.c
+				srcs/key_check.c	\
+				srcs/read_map2.c
 
 LIBFT		=	libft/libft.a
 PRINTF		=	printf/libftprintf.a
 GNL			=	get_next_line/get_next_line.a
 
-CFLAGS		=	-Wall -Wextra -Werror -g 
+CFLAGS		=	-Wall -Wextra -Werror -g #-fsanitize=address
 MLXFLAGS	=	-L ./mlx/ -lmlx -framework OpenGL -framework AppKit -lz
 MLX 		=	mlx/libmlx.a
 
