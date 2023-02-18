@@ -6,7 +6,7 @@
 /*   By: mgranate <mgranate@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 17:31:28 by anne-sophie       #+#    #+#             */
-/*   Updated: 2022/08/12 19:00:57 by mgranate         ###   ########.fr       */
+/*   Updated: 2023/02/18 02:39:21 by mgranate         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ void	free_images(t_data *vars)
 
 void	free_mlx(t_data *vars)
 {
-	printf("DEBUUGG\n");
 	free_map(vars);
 	free_images(vars);
 	mlx_destroy_window(vars->mlx, vars->win);
